@@ -1,0 +1,671 @@
+.footer{
+	min-height: 959px;
+	background-image: url('../img/photo-foot.jpg');
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: cover;
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
+	&__bg{
+		content:'';
+		width: 100%;
+		height: 100%;
+		background-color: rgba(9, 13, 51, 0.9);
+		position: absolute;
+
+	}
+	&__title1{
+		text-align: center;
+		margin-left: 36px;
+		position: relative;
+		z-index:1;
+
+		&:before{
+			content:'';
+			width:200px;
+			border-bottom: 5px solid #9172e6;
+			position: absolute;
+			top:52px;
+			left:0px;
+			transform: rotate(-52deg);
+			z-index:-1;
+		}
+		&:after{
+			content:'';
+			width:407px;
+			border-bottom: 5px solid #9172e6;
+			position: absolute;
+			top:61px;
+			right:57px;
+			transform: rotate(-52deg);
+			z-index:-1;
+
+		}
+	}
+	.surfbutton{
+		display: block;
+		width: 130px;
+		height: 137px;
+		background:linear-gradient(to bottom, #8769d3 0%, #512f9f 67%);
+		border-radius:30px;
+		position: relative;
+		bottom:9px;
+		box-shadow: 0 10px 15px #0a0e34;
+		&:hover{
+			box-shadow: 0 0 20px #d0c8ea,
+			inset 0 0 10px #d0c8ea;
+			transition: 0.3s;
+		}
+		&:active{
+			box-shadow: 0 0 20px #d0c8ea,
+			inset 0 0 10px #d0c8ea;
+			transition: 0.3s;
+			transform: scale(0.95);
+			transition: transform 0.1s;
+	
+		}
+	
+
+		&::after{
+			content:'';
+			width: inherit;
+			height: inherit;
+			background-image: url('../img/Artwork.svg');
+			background-size: 120%;
+			background-position: center;
+			background-repeat: no-repeat;
+			position: absolute;
+			right:3px;
+			top:0px;
+		}
+	}
+	.ok{
+		height: inherit;
+		display:flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.footlink{
+		display: flex;
+		justify-content: center;
+		padding-top: 232px;
+	}
+	&__title_com{
+		color: #a496ca;
+		font-family: "Proxima Nova";
+		font-size: 36px;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-align: left;
+		z-index:1;
+
+	}
+	&__buttons{
+		margin-top: -57px;
+	}
+}
+.footCont{
+	min-height: 168px;
+	background-color: rgba(9, 13, 51, 0.6);
+
+	&__cont{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-top: 71px;
+	}
+
+	&__surf{
+	}
+
+}
+.social{
+width: 137px;
+height: 27px;
+display: flex;
+justify-content: space-between;
+}
+.facebook{
+	width: 27px;
+	height: inherit;
+	background-image: url('../img/icons8-facebook-f.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	transition: 0.8s;
+
+	&:hover{
+		transform: scale(1.2);
+		transition: 0.3s;
+		box-shadow: 0 0 20px #d0c8ea,
+		inset 0 0 10px #d0c8ea;
+		transition: 0.3s;
+	}
+	&:active{
+		text-shadow: 0 0 20px #d0c8ea;
+		transition: 0.3s;
+		transform: scale(0.95);
+		transition: transform 0.1s;
+		transform: scale(0.8);
+		transition: 0.1s;
+	}
+
+}
+.twiter{
+	@extend .facebook;
+	background-image: url('../img/icons8-twitter.svg');
+
+}
+.inst{
+	@extend .facebook;
+	background-image: url('../img/icons8-instagram.svg');
+	background-size: 140%;
+
+}
+
+
+
+.navigator{
+
+	&__menu{
+		display: inline-block;
+		&:hover{
+			transform: scale(1.02);
+			transition: 0.3s;
+		}
+		&:active{
+			transform: scale(0.9);
+			transition: 0.1s;
+
+		}
+
+		&:last-child{
+			padding: 0 10px;
+			border-left:2px solid #fff;
+		}
+	}
+	
+	&__link{
+		padding-right:10px;
+		text-decoration: none;
+		color: #ffffff;
+		font-family: "Proxima Nova";
+		font-size: 20px;
+		font-weight: 400;
+		letter-spacing: 1px;
+		&:hover{
+			text-shadow: 0 0 20px #d0c8ea;
+			transform: scale(2);
+			transition: text-shadow 0.3s;
+		}
+		&:active{
+			text-shadow: 0 0 20px #d0c8ea;
+			transform: scale(1.2);
+			transition: 0.3s;
+		}
+	
+
+	}
+}
+@media screen /* and (min-width: 768px) */ and (max-width: 1200px) {
+	.footer{
+		// margin-top: 130px;
+		.surf, .navigator {
+			display: none;
+		}
+		.footCont{
+			min-height: 90px;
+			
+			&__cont{
+				justify-content: center;
+			}
+		}
+	
+		.footlink{
+			flex-direction: column;
+			align-items: center;
+			padding-top: 131px;
+		}
+		&__title1 {
+			margin-top: 66px;
+			&:before{
+				width:200px;
+				top:78px;
+				left:1px;
+			}
+			&:after{
+				width:407px;
+				top:86px;
+				right:57px;
+	
+			}
+	
+		}
+		&__title_com{
+			margin-top: 16px;
+		}
+		&__buttons {
+			margin-top: 104px;
+		}
+		.social {
+			width: 149px;
+			margin-bottom: 33px;
+		}
+	}
+}
+
+@media screen and (max-width:767px){
+	.container{
+		padding-right: 9px;
+		padding-left: 9px;
+	}
+
+	.surf{
+		font-size: 24px;
+		padding-left: 0;
+		&::before{
+			width: 45px;
+			height: 100%;
+			right: 92px;
+			top: 0px;
+	
+		}
+	}
+	.coach{
+		display:none
+	}
+
+	.title{
+		font-size: 32px;
+		line-height: 39px;
+		letter-spacing: 2px;
+
+		&__top {
+			padding-left:0;
+		}
+			
+		&__bottom{
+			max-width: 245px;
+			padding-right: 0;
+			margin-top: 13px;
+			z-index: 3;
+
+
+		}
+		&-line:after {
+			left: 35px;
+			top: 62px;
+			width:222px;
+		}
+	}
+
+	.head{
+		min-height:568px;
+		background-image: url('../img/bg320up.png');
+		&__bg{
+			background-color: rgba(9, 13, 51, 0.0);
+		}
+		&__upp{
+			justify-content: center;
+		}
+		&__surf{
+			margin-top: 39px;
+		}
+		&__header{
+			margin-top: 133px;
+			max-width: 450px;
+			margin-right: auto;
+			margin-left: auto;
+			}
+	
+		&__nav{
+			margin-top: 39px;
+			justify-content: center;
+				}
+		
+		&__buttons {
+			margin-top: 109px;
+		}
+	}
+		.nav{
+			&__menu{
+				width: 667px;
+				flex-wrap: wrap;
+				justify-content: center;
+
+			}
+			&__item{
+				padding: 0 15px;
+			}
+			&__link{
+				font-size: 12px;
+				line-height: 22px;
+				
+			}
+		}
+	
+	.buttons{
+		max-width:292px;
+	}
+	
+	.button{
+		width: 142px;
+		height: 39px;
+		border-radius: 70px;
+		box-shadow: 0 8px 12px #0a0e34;
+
+		&__text{
+			margin-left:45px ;
+			margin-top: 11px;
+		}
+	
+		&__text1{
+			font-size: 8px;
+			letter-spacing: 0.4px;
+		}
+
+		&__text2{
+			font-size: 8px;
+			letter-spacing: 0.4px;
+			margin-top: 4px;
+		}
+	}	
+		.gplay{
+			background-size:25px auto;
+			background-position:15% center ;
+		}
+		
+		.uppstore{
+			background-size:25px auto;
+			background-position: 14% center;
+		}
+		.container-nav-button{
+			display: flex;
+			flex-direction: column-reverse;
+			align-items: center;
+
+		}
+
+
+
+	//   ---- over ----
+
+
+
+.athlets{
+	&__bg{
+		width: 100%;
+		height: 280px;
+		background-image: url('../img/320-football.png');
+		background-position: center;
+		background-size: contain ;
+		right:0;
+		top:80px;
+	}
+}
+.context{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	flex-basis: auto;
+	max-width: 330px;
+	min-width: 280px;
+	min-height: 288px;
+}
+
+.content{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.white{
+	background-color: #fff;
+	min-height: 300px;
+	.cont-320{
+		display: none;
+	}
+	.content{
+		position: relative;
+	}
+}
+.gray{
+	background-color: #f6f4fa;
+	min-height: 238px;
+
+}
+.lilac{
+	display: none;
+}
+
+
+.over{
+	overflow: hidden;
+
+}	
+
+.basket{
+	&__bg{
+		width: 100%;
+		height: 250px;
+		background-image: url('../img/320-basck.png');
+		background-position: center;
+		background-size: contain ;
+		left:0;
+		top:80px;
+	}
+
+}
+
+.linetitle{
+	font-size: 50px;
+	padding-top: 20px;
+	text-align: center;
+	width: 100%;
+
+}
+.lineitems{
+	font-size: 28px;
+	letter-spacing: 1.4px;
+	padding-top: 81px;
+	text-align: center;
+
+}
+.linetext{
+	font-size: 15px;
+	line-height: 18px;
+	letter-spacing: 0.75px;
+	margin-top: 22px;
+	text-align: justify;
+
+}
+.no{
+	font-size: 14px;
+	letter-spacing: 0.9px;
+	padding-bottom: 2px;
+	margin-right: 9px;
+	bottom:7px;
+	&:before{
+		top:17px;
+		left:-1px;
+		width:18px;
+		border-bottom:4px solid #8e7cc7;
+		border-radius:2px;
+		content:'';
+	}
+}
+.slider{
+	display: flex;
+	justify-content: space-between;
+	width: 54px;
+	height: 10px;
+margin-bottom: 27px;
+	// display:none;
+}
+.circle{
+	display: block;
+	width: 10px;
+	height: 10px;
+	background-color: #d8d8d8;
+	background-size: 10px 10px;
+	border-radius: 50%;
+	transition: 0.2s;
+
+	&:hover{
+		background-color: #5c3caf;
+		transition: 0.2s;
+	}
+}
+	//---beactive---
+	.fotobg{
+		background-position: center top;
+			min-height: 351px;
+			min-width: 320px;
+			background-size: cover;
+		
+	}
+	.beactiv{
+		width: 100%;
+		.fotobg{
+			background-image: url('../img/320man.png');
+		}
+	}
+	.contct{
+		width: 100%;
+
+		.fotobg{
+			background-image: url('../img/320man-phone.png');
+		}
+	}
+	.work{
+		width: 100%;
+
+		.fotobg{
+			background-image: url('../img/320mach-man.png');
+		}
+	}	
+	.act_content{
+		width:50%;
+		min-width:262px;
+		min-height: 211px;
+		margin-bottom: auto;
+	}
+	.active{
+	}
+
+	.textBlock{
+		min-width:262px ;
+		margin-left: initial;
+		padding-top: 29px;
+
+		.linetitle{
+			font-size: 28px;
+			line-height: 32px;
+			letter-spacing: 1.4px;
+			text-align: left;
+		}
+		.linetext{
+			font-size: 15px;
+			line-height: 21px;
+			letter-spacing: 0.75px;
+			margin-top: 11px;
+			text-align: justify;
+		
+		}
+		
+	}
+	.numb {
+		top: 293px;
+		left: 6%;
+		width: 62px;
+		height: 62px;
+	
+		.nom{
+			font-size: 14px;
+			letter-spacing: 0.7px;
+			bottom:3px;
+			&:before{
+				top:17px;
+				left:0px;
+				width:16px;
+				border-bottom:4px solid #8e7cc7;
+				border-radius:2px;
+				content:'';
+			}
+		}
+	}
+	.contct {
+		.textBlock {
+			margin-right: 0;
+		}
+	}
+	.work{
+	}
+
+//---footer---
+	.footer {
+		min-height: 568px;
+		background-image: url(../img/320-bg-down.png);
+		&__bg{
+			height:568px;
+			background-color: rgba(9, 13, 51, 0.0);
+		}
+	
+		.surfbutton{
+			width: 78px;
+			height: 78px;
+			border-radius:15px;
+			bottom:34px;
+		}
+		&__title_com {
+			font-size: 15px;
+			letter-spacing: 0.6px;
+			text-align: center;
+		}
+		.footer__title_com {
+			margin-top: 5px;
+		}
+		&__title1 {
+			text-align: center;
+			margin-left: initial;
+			margin-top: 16px;
+
+			&:before{
+				width: 90px;
+				top: 30px;
+				left: -16px;
+				border-bottom: 4px solid #8e7cc7;
+			}
+
+			&:after{
+				width: 156px;
+				top: 31px;
+				right: 32px;
+				border-bottom:4px solid #8e7cc7;
+			}
+		}
+
+		&__buttons {
+			margin-top: 0px;
+		}
+		.social{
+			width: 134px;
+			height: 27px;
+			margin-bottom: 9px;
+
+			.facebook{
+				width: 20px;
+				height: inherit;
+			}
+			.twiter{
+				
+			}
+			.inst{
+				background-size: 140%;
+				
+			}
+		}
+	}
+}

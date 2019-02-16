@@ -1,0 +1,125 @@
+.over{
+	overflow: hidden;
+
+}	
+
+.basket{
+	&__bg{
+		width:991px;
+		height: 815px;
+		background-image: url('../img/NBA.png');
+		background-repeat: no-repeat;
+		background-size: 991px auto ;
+		position: absolute;
+		left:40%;
+		top:-33px;
+	}
+	.content{
+		display: flex;
+		justify-content: flex-start;
+}
+	.lilac{
+		background-color: #0b0c35;
+		.no{
+			color:#5e43ae;
+		}
+	}
+}
+
+.linetitle{
+	color: #e7e7e7;
+	font-family: "Proxima Nova - Bold";
+	font-size: 90px;
+	text-transform: uppercase;
+	padding-top: 99px;
+	text-align: left;
+	width: 100%;
+
+}
+.lineitems{
+	color: #c1c1c1;
+	font-family: "Proxima Nova - Bold";
+	font-size: 36px;
+	text-transform: uppercase;
+	letter-spacing: 1.8px;
+	padding-top: 68px;
+	text-align: left;
+	width: 100%;
+
+}
+.linetext{
+	width: 720px;
+	color: #000000;
+	font-family: "Proxima Nova";
+	font-size: 20px;
+	line-height: 25px;
+	letter-spacing: 1px;
+	margin-top: 22px;
+	text-align: left;
+	width: 100%;
+	text-align: justify;
+
+}
+.no{
+	font-family: "Proxima Nova - Bold";
+	color:#000;
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 0.9px;
+	padding-bottom: 2px;
+	margin-right: 9px;
+	position: relative;
+	bottom:12px;
+	&:before{
+		position:absolute;
+		top:27px;
+		left:1px;
+		width:22px;
+		border-bottom:5px solid #8e7cc7;
+		border-radius:2px;
+		content:'';
+	}
+}
+
+@media screen /* and (min-width: 768px) */ and (max-width: 1400px) {
+	.container{
+		padding-left: 35px;
+		padding-right: 35px;
+	
+	}
+	.context{
+		flex-basis: 460px;
+	}
+	.white{
+		min-height:347px;
+	}
+	.gray{
+		min-height: 237px;
+	}
+	.lilac {
+		background-color: #5e43ae;
+		min-height: 205px;
+	}
+	.linetitle{
+		padding-top: 66px;
+	}
+	.lineitems{
+		padding-top: 38px;
+	}
+	.linetext{
+		font-size: 18px;
+		
+	}
+	.athlets{
+		&__bg{
+			background-size: 505px auto;
+			right: 34%;
+			top: 92px;
+		}
+	}
+	.basket__bg {
+		background-size: 690px auto;
+		left: 43%;
+		top: 33px;
+	}
+}
